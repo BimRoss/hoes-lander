@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Hoes on Boats — Yacht Week Croatia, August 2026</title>
+<meta name="description" content="Twelve friends. One 52-foot catamaran. The Adriatic in August. Yacht Week Croatia 2026 — and a 70th birthday for Dad." />
+<meta name="theme-color" content="#0a3d5c" />
+<meta property="og:title" content="Hoes on Boats — Yacht Week Croatia, August 2026" />
+<meta property="og:description" content="Twelve of us. One 52-foot catamaran. Split → Hvar → Vis → Šolta → Split. And a 70th birthday for Dad." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://hoes.makeacompany.ai" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,0,500;9..144,0,600;9..144,0,700;9..144,1,400;9..144,1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --abyss: #061d2e;
+    --deep: #0a3d5c;
+    --sea: #0f6b86;
+    --shallow: #2fa3b8;
+    --foam: #c9e7e8;
+    --sand: #f4ead6;
+    --paper: #fbf5e6;
+    --sun: #f5b14b;
+    --sunset: #ec6a3a;
+    --coral: #d83f4c;
+    --olive: #7a8b48;
+    --ink: #0a1820;
+    --ink-soft: #1f3540;
+    --ink-dim: #5a7383;
+    --ink-faint: #93a8b4;
+    --line: #c9d6db;
+    --line-soft: #dde6e8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--sunset); color: var(--paper); }
+
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 12% 0%, rgba(245, 177, 75, 0.16), transparent 60%),
+      radial-gradient(ellipse 60% 45% at 88% 25%, rgba(47, 163, 184, 0.14), transparent 60%),
+      radial-gradient(ellipse 70% 50% at 50% 100%, rgba(236, 106, 58, 0.10), transparent 60%);
+    pointer-events: none; z-index: 0;
+  }
+
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 28px; position: relative; z-index: 1; }
+  @media (max-width: 640px) { .container { padding: 0 22px; } }
+
+  /* ===== NAV ===== */
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0;
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    background: rgba(251, 245, 230, 0.72);
+    border-bottom: 1px solid var(--line);
+    z-index: 50;
+  }
+  nav.top .inner {
+    max-width: 1180px; margin: 0 auto; padding: 14px 28px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  nav.top .mark {
+    font-family: 'Fraunces', serif; font-weight: 500; font-size: 18px;
+    letter-spacing: -0.01em; display: flex; align-items: center; gap: 8px;
+  }
+  nav.top .mark .anchor { color: var(--sea); transform: translateY(1px); display: inline-flex; }
+  nav.top .mark .dot { color: var(--sunset); }
+  nav.top .links { display: flex; gap: 26px; font-size: 13px; color: var(--ink-dim); }
+  nav.top .links a { color: inherit; text-decoration: none; transition: color .2s; }
+  nav.top .links a:hover { color: var(--ink); }
+  @media (max-width: 720px) { nav.top .links { display: none; } nav.top .inner { padding: 12px 22px; } }
+
+  /* ===== HERO ===== */
+  .hero {
+    position: relative;
+    padding-top: 140px; padding-bottom: 60px;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background: linear-gradient(180deg, #87cee0 0%, #4ba8c0 38%, #0f6b86 78%, #0a3d5c 100%);
+  }
+  .hero-bg::after {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 78% 22%, rgba(245, 177, 75, 0.7) 0, rgba(245, 177, 75, 0) 28%),
+      radial-gradient(circle at 78% 22%, rgba(255, 245, 220, 0.95) 0, rgba(255, 245, 220, 0) 6%);
+  }
+  .sun-disk {
+    position: absolute; top: 14%; right: 12%; width: 96px; height: 96px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #fff3c4, #f5b14b 60%, #ec6a3a 100%);
+    box-shadow: 0 0 80px 20px rgba(245, 177, 75, 0.55), 0 0 180px 40px rgba(236, 106, 58, 0.35);
+    z-index: 1;
+    animation: bob 7s ease-in-out infinite;
+  }
+  @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+  .waves { position: absolute; bottom: -2px; left: 0; right: 0; z-index: 2; line-height: 0; }
+  .waves svg { display: block; width: 100%; height: 110px; }
+  @media (max-width: 640px) { .waves svg { height: 70px; } }
+
+  .hero-content { position: relative; z-index: 5; color: #fff; text-align: center; padding-bottom: 40px; }
+  .hero .stamp {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    color: rgba(255,255,255,0.78); letter-spacing: 0.22em; text-transform: uppercase;
+    padding: 7px 14px; border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 999px; backdrop-filter: blur(6px);
+    margin-bottom: 28px;
+  }
+  .hero .stamp .pip { width: 6px; height: 6px; border-radius: 50%; background: var(--sun); box-shadow: 0 0 10px var(--sun); animation: blink 2s infinite; }
+  @keyframes blink { 50% { opacity: 0.4; } }
+
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(48px, 13vw, 132px);
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+    margin: 0 auto 6px;
+    text-shadow: 0 4px 30px rgba(6, 29, 46, 0.3);
+  }
+  .hero h1 .italic { font-style: italic; font-weight: 300; color: #ffe2a8; }
+  .hero h1 .amp { font-style: italic; font-weight: 300; color: rgba(255,255,255,0.6); padding: 0 4px; }
+
+  .hero .sub {
+    font-family: 'Fraunces', serif;
+    font-style: italic; font-weight: 300;
+    font-size: clamp(18px, 4vw, 26px);
+    color: rgba(255,255,255,0.92);
+    margin-top: 14px;
+    letter-spacing: 0.01em;
+  }
+
+  .hero .meta {
+    display: inline-flex; flex-wrap: wrap; justify-content: center;
+    gap: 10px 18px; margin-top: 26px;
+    font-family: 'JetBrains Mono', monospace; font-size: 11.5px;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+  }
+  .hero .meta .dot { color: rgba(255,255,255,0.4); }
+
+  /* COUNTDOWN */
+  .countdown {
+    margin: 38px auto 0; max-width: 560px;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .countdown .cell {
+    background: rgba(6, 29, 46, 0.28);
+    border: 1px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    border-radius: 14px;
+    padding: 14px 6px 12px;
+    text-align: center;
+  }
+  .countdown .num {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(28px, 7vw, 44px);
+    line-height: 1;
+    color: #fff;
+    font-variant-numeric: tabular-nums;
+  }
+  .countdown .lbl {
+    font-family: 'JetBrains Mono', monospace; font-size: 9.5px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin-top: 6px;
+  }
+
+  /* ===== SECTIONS ===== */
+  section { padding: 80px 0; position: relative; }
+  @media (max-width: 640px) { section { padding: 60px 0; } }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: 'JetBrains Mono', monospace; font-size: 10.5px;
+    color: var(--ink-faint); letter-spacing: 0.22em; text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .eyebrow .rule { width: 28px; height: 1px; background: var(--line); }
+  .eyebrow .no {
+    font-family: 'Fraunces', serif; font-style: italic; font-weight: 400;
+    font-size: 19px; color: var(--sunset); letter-spacing: -0.01em;
+  }
+  h2.section-title {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: clamp(34px, 7vw, 60px);
+    line-height: 1.02; letter-spacing: -0.025em;
+    color: var(--ink);
+    margin-bottom: 22px;
+  }
+  h2.section-title em { font-style: italic; color: var(--sea); font-weight: 300; }
+  .lede {
+    font-size: clamp(17px, 2.3vw, 19px);
+    color: var(--ink-soft); max-width: 640px;
+    line-height: 1.6;
+  }
+  .lede + .lede { margin-top: 14px; }
+
+  /* OCCASION */
+  .occasion .grid {
+    display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center;
+    margin-top: 38px;
+  }
+  @media (max-width: 820px) { .occasion .grid { grid-template-columns: 1fr; gap: 36px; } }
+
+  .birthday-card {
+    background: linear-gradient(155deg, #fff5d6, #fde0bb 60%, #f8c179);
+    border: 1px solid #eac98b;
+    border-radius: 22px;
+    padding: 32px;
+    position: relative; overflow: hidden;
+    box-shadow: 0 20px 60px -30px rgba(216, 134, 50, 0.5);
+  }
+  .birthday-card::before {
+    content: ""; position: absolute; top: -40px; right: -40px;
+    width: 200px; height: 200px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.7), transparent 70%);
+  }
+  .birthday-card .big-no {
+    font-family: 'Fraunces', serif; font-weight: 300; font-style: italic;
+    font-size: clamp(96px, 22vw, 168px);
+    line-height: 0.9; color: var(--sunset);
+    letter-spacing: -0.04em;
+    background: linear-gradient(180deg, #ec6a3a, #c84020);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .birthday-card .for-whom {
+    font-family: 'JetBrains Mono', monospace; font-size: 10.5px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: #8a4d20; margin-top: 4px;
+  }
+  .birthday-card h3 {
+    font-family: 'Fraunces', serif; font-weight: 500;
+    font-size: clamp(26px, 4.5vw, 34px);
+    line-height: 1.1; color: #4a230b;
+    margin-top: 8px;
+  }
+  .birthday-card h3 em { font-style: italic; font-weight: 400; }
+  .birthday-card p {
+    color: #5a3015; margin-top: 14px;
+    font-size: 15.5px; line-height: 1.6;
+    position: relative; z-index: 1;
+  }
+  .birthday-card .donsgarage {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 16px;
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: #8a4d20; text-decoration: none;
+    border-bottom: 1px dashed #c47a2e; padding-bottom: 2px;
+    transition: all .2s;
+  }
+  .birthday-card .donsgarage:hover { color: var(--sunset); border-color: var(--sunset); }
+
+  /* CREW */
+  .crew { background: linear-gradient(180deg, var(--paper) 0%, var(--sand) 100%); }
+  .crew-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 40px;
+  }
+  @media (max-width: 820px) { .crew-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 520px) { .crew-grid { grid-template-columns: repeat(2, 1fr); } }
+  .crew-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 18px 14px 16px;
+    position: relative;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    text-align: center;
+    aspect-ratio: 1 / 1.05;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .crew-card:hover { transform: translateY(-3px); box-shadow: 0 18px 36px -22px rgba(10, 61, 92, 0.45); border-color: var(--shallow); }
+  .crew-card .avatar {
+    width: 56px; height: 56px; border-radius: 50%;
+    margin: 0 auto 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif; font-weight: 500; font-size: 22px;
+    color: #fff;
+    box-shadow: inset 0 -8px 18px rgba(0,0,0,0.12);
+  }
+  .crew-card .name {
+    font-family: 'Fraunces', serif; font-weight: 500;
+    font-size: 18px; color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .crew-card .tag {
+    font-family: 'JetBrains Mono', monospace; font-size: 9.5px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-dim); margin-top: 4px;
+  }
+  .crew-card.dad {
+    background: linear-gradient(160deg, #fff5d6, #fce3b5);
+    border-color: #e6b97a;
+    grid-column: span 2;
+    aspect-ratio: auto;
+    padding: 22px 18px;
+  }
+  @media (max-width: 520px) { .crew-card.dad { grid-column: span 2; } }
+  .crew-card.dad .avatar { width: 72px; height: 72px; font-size: 28px; }
+  .crew-card.dad .name { font-size: 22px; color: #4a230b; }
+  .crew-card.dad .tag { color: #8a4d20; }
+  .crew-card.dad .crown {
+    position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+    background: var(--sunset); color: #fff;
+    font-family: 'JetBrains Mono', monospace; font-size: 9.5px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 999px;
+    box-shadow: 0 6px 20px -6px rgba(236, 106, 58, 0.7);
+  }
+  .crew-card.tbd { background: transparent; border-style: dashed; border-color: var(--ink-faint); }
+  .crew-card.tbd .avatar { background: transparent; border: 1px dashed var(--ink-faint); color: var(--ink-faint); box-shadow: none; }
+  .crew-card.tbd .name { color: var(--ink-faint); font-style: italic; }
+
+  /* BOAT */
+  .boat { background: linear-gradient(180deg, #eef6f6 0%, #d9ecec 100%); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+  .boat .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  @media (max-width: 820px) { .boat .grid { grid-template-columns: 1fr; gap: 36px; } }
+  .boat-art {
+    background: linear-gradient(180deg, #cde9ed 0%, #80c5cf 60%, #2a8da0 100%);
+    border-radius: 20px; padding: 28px;
+    aspect-ratio: 4/3;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+    box-shadow: 0 30px 60px -30px rgba(15, 107, 134, 0.5);
+  }
+  .boat-art svg { width: 100%; height: auto; max-width: 460px; }
+  .boat-art .sun { position: absolute; top: 18%; right: 18%; width: 50px; height: 50px; border-radius: 50%; background: radial-gradient(circle, #fff3c4 0%, #f5b14b 80%); box-shadow: 0 0 40px 8px rgba(245,177,75,0.55); }
+
+  .boat-spec {
+    list-style: none; margin-top: 28px;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 28px;
+  }
+  .boat-spec li { border-top: 1px solid var(--line); padding-top: 10px; }
+  .boat-spec .key {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .boat-spec .val {
+    font-family: 'Fraunces', serif; font-weight: 400;
+    font-size: 22px; color: var(--ink-soft); margin-top: 2px;
+    letter-spacing: -0.01em;
+  }
+  .boat-spec .val em { font-style: italic; color: var(--sea); }
+
+  /* ROUTE */
+  .route-list { margin-top: 40px; position: relative; padding-left: 0; list-style: none; }
+  .route-list::before {
+    content: ""; position: absolute; left: 17px; top: 12px; bottom: 12px;
+    width: 2px;
+    background: repeating-linear-gradient(180deg, var(--shallow) 0 6px, transparent 6px 12px);
+  }
+  .stop {
+    position: relative;
+    padding: 16px 0 20px 56px;
+    border-bottom: 1px dashed var(--line);
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity .6s ease, transform .6s ease;
+  }
+  .stop.in { opacity: 1; transform: none; }
+  .stop:last-child { border-bottom: none; }
+  .stop::before {
+    content: "";
+    position: absolute; left: 10px; top: 22px;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: var(--paper);
+    border: 3px solid var(--sea);
+    box-shadow: 0 0 0 4px rgba(15, 107, 134, 0.12);
+  }
+  .stop .day {
+    font-family: 'JetBrains Mono', monospace; font-size: 10.5px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--sunset); margin-bottom: 4px;
+  }
+  .stop .place {
+    font-family: 'Fraunces', serif; font-weight: 500; font-size: 26px;
+    color: var(--ink); letter-spacing: -0.02em;
+  }
+  .stop .place em { font-style: italic; color: var(--sea); font-weight: 400; }
+  .stop p { color: var(--ink-soft); margin-top: 6px; max-width: 620px; font-size: 15.5px; }
+  .stop .pron {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    color: var(--ink-faint); margin-left: 8px;
+  }
+
+  /* HISTORY */
+  .history { background: linear-gradient(180deg, #0a3d5c 0%, #061d2e 100%); color: var(--foam); }
+  .history .eyebrow { color: rgba(255,255,255,0.55); }
+  .history .eyebrow .rule { background: rgba(255,255,255,0.25); }
+  .history .eyebrow .no { color: var(--sun); }
+  .history h2.section-title { color: #fff; }
+  .history h2.section-title em { color: var(--sun); }
+  .history .lede { color: rgba(255,255,255,0.78); }
+  .history .facts {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+    margin-top: 40px;
+  }
+  @media (max-width: 820px) { .history .facts { grid-template-columns: 1fr; } }
+  .fact {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px; padding: 22px;
+  }
+  .fact .big {
+    font-family: 'Fraunces', serif; font-weight: 300; font-style: italic;
+    font-size: 56px; line-height: 1; color: var(--sun);
+    letter-spacing: -0.02em;
+  }
+  .fact .lbl {
+    font-family: 'JetBrains Mono', monospace; font-size: 10.5px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(255,255,255,0.55); margin-top: 8px;
+  }
+  .fact p { margin-top: 12px; font-size: 14.5px; color: rgba(255,255,255,0.8); line-height: 1.55; }
+
+  /* GROUP CHAT */
+  .chat { background: var(--sand); }
+  .chat-bubbles {
+    margin-top: 36px;
+    display: flex; flex-direction: column; gap: 10px;
+    max-width: 540px;
+  }
+  .bubble {
+    background: #fff;
+    border-radius: 18px;
+    padding: 12px 16px;
+    max-width: 84%;
+    box-shadow: 0 4px 14px -6px rgba(10, 24, 32, 0.15);
+    position: relative;
+    line-height: 1.45;
+    font-size: 15.5px;
+  }
+  .bubble .from {
+    font-family: 'JetBrains Mono', monospace; font-size: 9.5px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 4px;
+  }
+  .bubble.them { align-self: flex-start; border-bottom-left-radius: 6px; }
+  .bubble.me {
+    align-self: flex-end; background: var(--sea); color: #fff;
+    border-bottom-right-radius: 6px;
+  }
+  .bubble.me .from { color: rgba(255,255,255,0.7); }
+
+  /* PACKING */
+  .packing-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+    margin-top: 36px;
+  }
+  @media (max-width: 820px) { .packing-grid { grid-template-columns: 1fr; } }
+  .pack-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 16px; padding: 22px;
+  }
+  .pack-card h4 {
+    font-family: 'Fraunces', serif; font-weight: 500;
+    font-size: 22px; color: var(--ink);
+    margin-bottom: 14px;
+    display: flex; align-items: center; gap: 10px;
+    letter-spacing: -0.01em;
+  }
+  .pack-card h4 .badge {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--shallow); color: #fff;
+    font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 500;
+  }
+  .pack-card ul { list-style: none; }
+  .pack-card li {
+    padding: 6px 0; font-size: 14.5px; color: var(--ink-soft);
+    display: flex; align-items: flex-start; gap: 8px;
+  }
+  .pack-card li::before {
+    content: ""; width: 5px; height: 5px; border-radius: 50%;
+    background: var(--sunset); margin-top: 9px; flex-shrink: 0;
+  }
+
+  /* FOOTER */
+  footer { background: linear-gradient(180deg, #061d2e 0%, #03101a 100%); color: rgba(255,255,255,0.6); padding: 60px 0 40px; text-align: center; }
+  footer .mark { font-family: 'Fraunces', serif; font-style: italic; font-weight: 400; font-size: 22px; color: #fff; }
+  footer .tag { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 8px; }
+  footer p { margin-top: 18px; font-size: 13px; }
+  footer a { color: var(--sun); text-decoration: none; border-bottom: 1px dashed rgba(245,177,75,0.4); }
+
+  /* REVEAL */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s ease, transform .8s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal-delay-1 { transition-delay: .08s; }
+  .reveal-delay-2 { transition-delay: .16s; }
+  .reveal-delay-3 { transition-delay: .24s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+    .reveal { opacity: 1; transform: none; }
+    .stop { opacity: 1; transform: none; }
+  }
+
+  /* tiny boat sail animation in hero */
+  .sailboat {
+    position: absolute;
+    bottom: 90px;
+    z-index: 3;
+    width: 60px;
+    animation: sail 22s linear infinite;
+    opacity: 0.9;
+  }
+  @media (max-width: 640px) { .sailboat { bottom: 60px; width: 42px; } }
+  @keyframes sail {
+    0%   { left: -10%; transform: translateY(0) rotate(-2deg); }
+    25%  { transform: translateY(-4px) rotate(1deg); }
+    50%  { transform: translateY(0) rotate(-1deg); }
+    75%  { transform: translateY(-3px) rotate(2deg); }
+    100% { left: 110%; transform: translateY(0) rotate(-2deg); }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="inner">
+    <div class="mark">
+      <span class="anchor">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.2"/><path d="M12 7.2v14"/><path d="M6 21a8 8 0 0 0 6-3 8 8 0 0 0 6 3"/><path d="M8 11h8"/></svg>
+      </span>
+      Hoes on Boats<span class="dot">.</span>
+    </div>
+    <div class="links">
+      <a href="#occasion">Occasion</a>
+      <a href="#crew">Crew</a>
+      <a href="#boat">Boat</a>
+      <a href="#route">Route</a>
+      <a href="#yacht-week">Yacht Week</a>
+      <a href="#packing">Packing</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="sun-disk"></div>
+
+  <svg class="sailboat" viewBox="0 0 60 70" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M30 6 L30 50" stroke="#0a3d5c" stroke-width="1.5"/>
+    <path d="M30 8 L48 46 L30 46 Z" fill="#fff5e1" stroke="#0a3d5c" stroke-width="1"/>
+    <path d="M30 12 L18 46 L30 46 Z" fill="#ffe2a8" stroke="#0a3d5c" stroke-width="1"/>
+    <path d="M8 52 Q30 64 52 52 L46 60 Q30 66 14 60 Z" fill="#c84020" stroke="#7a2818" stroke-width="1"/>
+  </svg>
+
+  <div class="container hero-content">
+    <div class="stamp"><span class="pip"></span>Croatia · Aug 9 – 16, 2026</div>
+    <h1>
+      Hoes <span class="amp">on</span><br/>
+      <span class="italic">Boats.</span>
+    </h1>
+    <div class="sub">Twelve friends, one catamaran, the Adriatic.</div>
+    <div class="meta">
+      <span>52′ Catamaran</span>
+      <span class="dot">◆</span>
+      <span>Split → Hvar → Vis → Šolta</span>
+      <span class="dot">◆</span>
+      <span>Yacht Week '26</span>
+    </div>
+
+    <div class="countdown" id="countdown">
+      <div class="cell"><div class="num" id="cd-days">—</div><div class="lbl">Days</div></div>
+      <div class="cell"><div class="num" id="cd-hours">—</div><div class="lbl">Hours</div></div>
+      <div class="cell"><div class="num" id="cd-mins">—</div><div class="lbl">Minutes</div></div>
+      <div class="cell"><div class="num" id="cd-secs">—</div><div class="lbl">Seconds</div></div>
+    </div>
+  </div>
+
+  <div class="waves" aria-hidden="true">
+    <svg viewBox="0 0 1440 110" preserveAspectRatio="none">
+      <path d="M0,60 C240,110 480,10 720,40 C960,70 1200,20 1440,55 L1440,110 L0,110 Z" fill="#f4ead6" opacity="0.55"/>
+      <path d="M0,75 C240,30 480,90 720,55 C960,20 1200,80 1440,45 L1440,110 L0,110 Z" fill="#f4ead6" opacity="0.85"/>
+      <path d="M0,90 C240,70 480,110 720,85 C960,60 1200,100 1440,80 L1440,110 L0,110 Z" fill="#fbf5e6"/>
+    </svg>
+  </div>
+</header>
+
+<!-- ===== OCCASION ===== -->
+<section id="occasion" class="occasion">
+  <div class="container">
+    <div class="eyebrow"><span class="no">№ 01</span><span class="rule"></span><span>The occasion</span></div>
+    <h2 class="section-title reveal">A 70th birthday, <em>at sea.</em></h2>
+    <div class="grid">
+      <div class="reveal reveal-delay-1">
+        <p class="lede">In August, twelve of us are flying to Croatia to spend a week on a 52-foot catamaran for Yacht Week. We're swimming in Stiniva Cove. We're docking in Hvar. We're regatta-ing in Šolta. We're (some of us, allegedly) doing resistance-band workouts on the deck at sunrise.</p>
+        <p class="lede">And in the middle of all of it, Dad is turning 70.</p>
+        <p class="lede">He's spent the last 50 years building things, fixing things, raising us, and giving everyone he meets a reason to stick around. This is the trip we throw him.</p>
+      </div>
+      <div class="birthday-card reveal reveal-delay-2">
+        <div class="for-whom">For Don</div>
+        <div class="big-no">70</div>
+        <h3>Seven decades of <em>Don.</em></h3>
+        <p>From the garage to the Adriatic. The man who could rebuild anything in his shop is getting a week where the only thing he has to operate is a deck chair.</p>
+        <a href="https://donsgarage.makeacompany.ai" class="donsgarage" target="_blank" rel="noopener">↗ donsgarage.makeacompany.ai</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CREW ===== -->
+<section id="crew" class="crew">
+  <div class="container">
+    <div class="eyebrow"><span class="no">№ 02</span><span class="rule"></span><span>The crew</span></div>
+    <h2 class="section-title reveal">Twelve of us, <em>one boat.</em></h2>
+    <p class="lede reveal reveal-delay-1">The "Hoes on Boats" group chat made flesh. Officially: a catamaran charter. Unofficially: a floating family reunion.</p>
+    <div class="crew-grid">
+      <div class="crew-card dad reveal reveal-delay-1">
+        <div class="crown">Guest of honor</div>
+        <div>
+          <div class="avatar" style="background: linear-gradient(135deg, #ec6a3a, #c84020);">D</div>
+          <div class="name">Don</div>
+          <div class="tag">Captain Dad · 70</div>
+        </div>
+      </div>
+      <div class="crew-card reveal reveal-delay-2"><div><div class="avatar" style="background: linear-gradient(135deg, #2fa3b8, #0f6b86);">R</div><div class="name">Ross</div><div class="tag">First mate</div></div></div>
+      <div class="crew-card reveal reveal-delay-2"><div><div class="avatar" style="background: linear-gradient(135deg, #a4b86e, #7a8b48);">E</div><div class="name">Erika</div><div class="tag">Resistance bands</div></div></div>
+      <div class="crew-card reveal reveal-delay-2"><div><div class="avatar" style="background: linear-gradient(135deg, #8aa5b3, #5a7d8e);">R</div><div class="name">Ryan</div><div class="tag">Above all else</div></div></div>
+      <div class="crew-card reveal reveal-delay-3"><div><div class="avatar" style="background: linear-gradient(135deg, #c69bb7, #94668d);">K</div><div class="name">Kirsten</div><div class="tag">Balance journey</div></div></div>
+      <div class="crew-card reveal reveal-delay-3"><div><div class="avatar" style="background: linear-gradient(135deg, #6fb88a, #3e8b5f);">A</div><div class="name">Arturo</div><div class="tag">Daily workouts</div></div></div>
+      <div class="crew-card reveal reveal-delay-3"><div><div class="avatar" style="background: linear-gradient(135deg, #8a8ac8, #5e5eaa);">S</div><div class="name">Sarah</div><div class="tag">We can do it</div></div></div>
+      <div class="crew-card tbd reveal reveal-delay-3"><div><div class="avatar">?</div><div class="name">TBD</div><div class="tag">Slot 8</div></div></div>
+      <div class="crew-card tbd reveal reveal-delay-3"><div><div class="avatar">?</div><div class="name">TBD</div><div class="tag">Slot 9</div></div></div>
+      <div class="crew-card tbd reveal reveal-delay-3"><div><div class="avatar">?</div><div class="name">TBD</div><div class="tag">Slot 10</div></div></div>
+      <div class="crew-card tbd reveal reveal-delay-3"><div><div class="avatar">?</div><div class="name">TBD</div><div class="tag">Slot 11</div></div></div>
+      <div class="crew-card tbd reveal reveal-delay-3"><div><div class="avatar">?</div><div class="name">TBD</div><div class="tag">Slot 12</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BOAT ===== -->
+<section id="boat" class="boat">
+  <div class="container">
+    <div class="eyebrow"><span class="no">№ 03</span><span class="rule"></span><span>The boat</span></div>
+    <div class="grid">
+      <div>
+        <h2 class="section-title reveal">A 52-foot <em>catamaran.</em></h2>
+        <p class="lede reveal reveal-delay-1">Two hulls. Three decks of usable real estate. A flybridge for the captain, a cockpit for dinner, a trampoline at the bow for the people who need to lie down between swims.</p>
+        <p class="lede reveal reveal-delay-2">Catamarans don't heel like monohulls — drinks stay on tables, and Don's coffee stays in the mug. That's the whole pitch.</p>
+        <ul class="boat-spec reveal reveal-delay-3">
+          <li><div class="key">Length</div><div class="val">52 <em>ft</em></div></li>
+          <li><div class="key">Hulls</div><div class="val">Two</div></li>
+          <li><div class="key">Guests</div><div class="val">12 + crew</div></li>
+          <li><div class="key">Top speed</div><div class="val">≈ 10 <em>kts</em></div></li>
+          <li><div class="key">Berths</div><div class="val">6 cabins</div></li>
+          <li><div class="key">Heads</div><div class="val">6 (yes, six)</div></li>
+        </ul>
+      </div>
+      <div class="boat-art reveal reveal-delay-2">
+        <div class="sun" aria-hidden="true"></div>
+        <svg viewBox="0 0 460 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- water -->
+          <path d="M0,210 Q115,195 230,210 T460,210 L460,280 L0,280 Z" fill="#1e8aa0" opacity="0.45"/>
+          <path d="M0,228 Q115,213 230,228 T460,228 L460,280 L0,280 Z" fill="#0f6b86" opacity="0.6"/>
+          <!-- twin hulls -->
+          <path d="M70,205 L390,205 L370,225 L90,225 Z" fill="#0a3d5c"/>
+          <path d="M85,195 L375,195 L370,205 L90,205 Z" fill="#1f3540"/>
+          <ellipse cx="135" cy="225" rx="55" ry="6" fill="#0a3d5c"/>
+          <ellipse cx="325" cy="225" rx="55" ry="6" fill="#0a3d5c"/>
+          <!-- cabin -->
+          <path d="M140,180 L320,180 L300,195 L160,195 Z" fill="#fbf5e6"/>
+          <path d="M150,170 L310,170 L320,180 L140,180 Z" fill="#f4ead6"/>
+          <!-- windows -->
+          <rect x="165" y="184" width="20" height="6" fill="#2fa3b8" rx="1"/>
+          <rect x="195" y="184" width="20" height="6" fill="#2fa3b8" rx="1"/>
+          <rect x="225" y="184" width="20" height="6" fill="#2fa3b8" rx="1"/>
+          <rect x="255" y="184" width="20" height="6" fill="#2fa3b8" rx="1"/>
+          <rect x="285" y="184" width="14" height="6" fill="#2fa3b8" rx="1"/>
+          <!-- flybridge -->
+          <rect x="200" y="155" width="80" height="16" fill="#0a3d5c" rx="3"/>
+          <rect x="205" y="158" width="70" height="10" fill="#5fb3c4" rx="2"/>
+          <!-- mast -->
+          <line x1="240" y1="155" x2="240" y2="40" stroke="#0a3d5c" stroke-width="2"/>
+          <!-- mainsail -->
+          <path d="M240,45 L240,150 L295,150 Z" fill="#fff5e1" stroke="#0a3d5c" stroke-width="1"/>
+          <!-- jib -->
+          <path d="M240,55 L240,150 L195,150 Z" fill="#ffe2a8" stroke="#0a3d5c" stroke-width="1"/>
+          <!-- flag -->
+          <path d="M240,40 L255,45 L240,50 Z" fill="#d83f4c"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ROUTE ===== -->
+<section id="route">
+  <div class="container">
+    <div class="eyebrow"><span class="no">№ 04</span><span class="rule"></span><span>The route</span></div>
+    <h2 class="section-title reveal">Seven days, <em>seven anchorages.</em></h2>
+    <p class="lede reveal reveal-delay-1">The classic Yacht Week Croatia loop. Saturday boarding in Split, the islands all week, Saturday disembark. Times approximate. Plans, like winds, shift.</p>
+
+    <ol class="route-list">
+      <li class="stop">
+        <div class="day">Sat · Aug 9 · Day 1</div>
+        <div class="place">Split <span class="pron">/split/</span></div>
+        <p>Board the catamaran at ACI Marina. Provisioning run, first dinner on deck, sleep in the harbor. Diocletian's 1,700-year-old palace sits a 10-minute walk away if anyone has energy left.</p>
+      </li>
+      <li class="stop">
+        <div class="day">Sun · Aug 10 · Day 2</div>
+        <div class="place">Hvar Town <span class="pron">/hvahr/</span></div>
+        <p>Sail south to Hvar — sunniest island in Croatia, allegedly 2,700 hours a year. Stari Grad if we want medieval and quiet, Hvar Town if we want Carpe Diem and crowds. We will pick both, in that order.</p>
+      </li>
+      <li class="stop">
+        <div class="day">Mon · Aug 11 · Day 3</div>
+        <div class="place">Vis <span class="pron">/vees/</span></div>
+        <p>The furthest-from-the-mainland inhabited island in Croatia. Closed to foreigners until 1989 as a Yugoslav military base, which is why the wine is good and the village is still small. Mamma Mia 2 was filmed here.</p>
+      </li>
+      <li class="stop">
+        <div class="day">Tue · Aug 12 · Day 4</div>
+        <div class="place">Stiniva Cove <span class="pron">/stee-nee-vah/</span></div>
+        <p>Two cliffs almost touching, a beach the size of a tennis court tucked behind them. European Best Beach 2016. The catamaran anchors outside; we swim or dinghy in. Bring a waterproof speaker.</p>
+      </li>
+      <li class="stop">
+        <div class="day">Wed · Aug 13 · Day 5 · <strong>Don's 70th</strong></div>
+        <div class="place">Palmižana <span class="pron">/pal-mee-zhah-nah/</span></div>
+        <p>The Pakleni Islands, off Hvar. Pine-shaded coves, Meneghello's white-tablecloth restaurant under fig trees. We dock here for the birthday dinner. Cake survives the day, somehow.</p>
+      </li>
+      <li class="stop">
+        <div class="day">Thu · Aug 14 · Day 6</div>
+        <div class="place">Šolta <span class="pron">/shol-tah/</span></div>
+        <p>Maslinica on the west side — seven tiny islets, an 18th-century castle turned hotel, the Yacht Week regatta finishes here. Olive oil island. Quiet on the surface, rowdy by dinner.</p>
+      </li>
+      <li class="stop">
+        <div class="day">Fri · Aug 15 · Day 7</div>
+        <div class="place">Trogir → Split <span class="pron">/troh-geer/</span></div>
+        <p>Swing through Trogir's UNESCO old town for lunch, then sail back to Split for the final night. Pack tomorrow. Tonight: one more deck dinner, all twelve, the lights of the city across the bay.</p>
+      </li>
+      <li class="stop">
+        <div class="day">Sat · Aug 16 · Day 8</div>
+        <div class="place">Disembark</div>
+        <p>10:00 off the boat. Some of us fly home. Some of us extend in Hvar. All of us reread the group chat for six weeks.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== YACHT WEEK ===== -->
+<section id="yacht-week" class="history">
+  <div class="container">
+    <div class="eyebrow"><span class="no">№ 05</span><span class="rule"></span><span>What's Yacht Week?</span></div>
+    <h2 class="section-title reveal">A floating festival, <em>since 2006.</em></h2>
+    <p class="lede reveal reveal-delay-1">A group of Swedish friends rented a few boats in Croatia in 2006 and brought a DJ. The next year they brought more boats. By 2010 it was a flotilla. Today it's the biggest sailing event in the world — a week-long, island-hopping party where ~50–150 yachts move together from cove to cove, dropping anchor in raft-ups, with daytime swim stops and nighttime parties on islands you've never heard of.</p>
+    <p class="lede reveal reveal-delay-2">Croatia is the original route. There's now a Greece week, a British Virgin Islands week, a Sardinia week. None of them are this one. The Croatian coast has 1,200+ islands and the Adriatic stays warm into October — it was always going to win.</p>
+
+    <div class="facts">
+      <div class="fact reveal reveal-delay-1">
+        <div class="big">2006</div>
+        <div class="lbl">First flotilla</div>
+        <p>Swedish friends rent a handful of boats in Croatia, bring a sound system, invent a category.</p>
+      </div>
+      <div class="fact reveal reveal-delay-2">
+        <div class="big">~50</div>
+        <div class="lbl">Boats per week</div>
+        <p>Catamarans, monohulls, and the occasional gulet — moving together, anchoring together, partying together.</p>
+      </div>
+      <div class="fact reveal reveal-delay-3">
+        <div class="big">1,244</div>
+        <div class="lbl">Croatian islands</div>
+        <p>Only ~50 are inhabited. The rest are anchorages, swim coves, and lunch stops you'll never find on a map.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CHAT ===== -->
+<section id="chat" class="chat">
+  <div class="container">
+    <div class="eyebrow"><span class="no">№ 06</span><span class="rule"></span><span>From the group chat</span></div>
+    <h2 class="section-title reveal">Above all <em>else.</em></h2>
+    <p class="lede reveal reveal-delay-1">Some pinned moments from the "Hoes on Boats" thread. Direct quotes. Names lightly redacted.</p>
+    <div class="chat-bubbles">
+      <div class="bubble them reveal reveal-delay-1"><div class="from">Erika</div>I bought 20 resistance bands and am gonna program 7 workouts / force you all to do it with me</div>
+      <div class="bubble me reveal reveal-delay-1"><div class="from">Ryan</div>ABOVE ALL ELSE</div>
+      <div class="bubble them reveal reveal-delay-2"><div class="from">Kirsten</div>I'm scared lol</div>
+      <div class="bubble them reveal reveal-delay-2"><div class="from">Arturo</div>I would love daily workouts on the boat</div>
+      <div class="bubble them reveal reveal-delay-3"><div class="from">Sarah</div>We can do it!! 👍 This is part of your new balance kier lol</div>
+      <div class="bubble them reveal reveal-delay-3"><div class="from">Kirsten</div>I'm on a balance journey everyone</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PACKING ===== -->
+<section id="packing">
+  <div class="container">
+    <div class="eyebrow"><span class="no">№ 07</span><span class="rule"></span><span>Pack smart</span></div>
+    <h2 class="section-title reveal">Bring soft bags, <em>not suitcases.</em></h2>
+    <p class="lede reveal reveal-delay-1">Catamaran storage is generous by boat standards and tiny by hotel standards. Roll, don't fold. Hard suitcases have nowhere to live.</p>
+
+    <div class="packing-grid">
+      <div class="pack-card reveal reveal-delay-1">
+        <h4><span class="badge">01</span>On you</h4>
+        <ul>
+          <li>Passport (6+ months validity)</li>
+          <li>Reef-safe sunscreen × 2</li>
+          <li>Water shoes — Adriatic coves are pebble</li>
+          <li>Polarized sunglasses</li>
+          <li>Two swimsuits, minimum</li>
+          <li>One sweater for the sail back</li>
+        </ul>
+      </div>
+      <div class="pack-card reveal reveal-delay-2">
+        <h4><span class="badge">02</span>For the boat</h4>
+        <ul>
+          <li>Soft duffel — no hard-shells</li>
+          <li>Refillable water bottle</li>
+          <li>Dry bag for phone + cash</li>
+          <li>Headlamp for night swims</li>
+          <li>Extension cord (boat outlets are scarce)</li>
+          <li>Sea-sickness patches (optional, free insurance)</li>
+        </ul>
+      </div>
+      <div class="pack-card reveal reveal-delay-3">
+        <h4><span class="badge">03</span>For the shore</h4>
+        <ul>
+          <li>One nice outfit — Hvar dress code is "tried"</li>
+          <li>Cash in Euros (Croatia switched in 2023)</li>
+          <li>Sandals + one pair of real shoes</li>
+          <li>A small gift for Don (be sneaky)</li>
+          <li>Charged portable battery</li>
+          <li>Whatever Erika tells you to bring</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="mark">Hoes on Boats.</div>
+    <div class="tag">Croatia · Aug 2026 · 70 + 12 + 1 cat</div>
+    <p>Made with salt water and group-chat energy.<br/>For Don — see also <a href="https://donsgarage.makeacompany.ai">donsgarage.makeacompany.ai</a>.</p>
+  </div>
+</footer>
+
+<script>
+  // Countdown to Aug 9, 2026 09:00 local Split time (UTC+2 in August)
+  const target = new Date('2026-08-09T09:00:00+02:00').getTime();
+  const el = {
+    d: document.getElementById('cd-days'),
+    h: document.getElementById('cd-hours'),
+    m: document.getElementById('cd-mins'),
+    s: document.getElementById('cd-secs'),
+  };
+  function tick() {
+    const now = Date.now();
+    let diff = Math.max(0, target - now);
+    const d = Math.floor(diff / 86400000); diff -= d * 86400000;
+    const h = Math.floor(diff / 3600000);  diff -= h * 3600000;
+    const m = Math.floor(diff / 60000);    diff -= m * 60000;
+    const s = Math.floor(diff / 1000);
+    el.d.textContent = String(d);
+    el.h.textContent = String(h).padStart(2,'0');
+    el.m.textContent = String(m).padStart(2,'0');
+    el.s.textContent = String(s).padStart(2,'0');
+  }
+  tick(); setInterval(tick, 1000);
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  document.querySelectorAll('.reveal, .stop').forEach(n => io.observe(n));
+</script>
+
+</body>
+</html>
